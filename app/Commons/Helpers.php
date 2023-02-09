@@ -83,7 +83,6 @@ function isActive($val1, $val2)
     }
 }
 
-
 function isDisabled($val1, $val2)
 {
     if ($val1 === $val2) {

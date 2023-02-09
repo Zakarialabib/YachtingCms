@@ -20,6 +20,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "laravel/ui": "^4.2",
         "livewire/livewire": "^2.10",
         "realrashid/sweet-alert": "^5.1",
         "renatomarinho/laravel-page-speed": "^2.1",
@@ -58,7 +59,6 @@
     },
     "autoload-dev": {
         "files": [
-            "app/Support/Helpers.php",
             "app/Commons/Helpers.php"
         ],
         "psr-4": {

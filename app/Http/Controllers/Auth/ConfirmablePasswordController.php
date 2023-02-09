@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -28,8 +30,8 @@ class ConfirmablePasswordController extends Controller
      */
     public function store(Request $request)
     {
-        if (! Auth::guard('web')->validate([
-            'email' => $request->user()->email,
+        if ( ! Auth::guard('web')->validate([
+            'email'    => $request->user()->email,
             'password' => $request->password,
         ])) {
             throw ValidationException::withMessages([
@@ -39,6 +41,12 @@ class ConfirmablePasswordController extends Controller
 
         $request->session()->put('auth.password_confirmed_at', time());
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if (Auth::user()->isAdmin()) {
+            return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
+        } elseif (Auth::user()->isClient()) {
+            return redirect()->intended(RouteServiceProvider::CLIENT_HOME);
+        } else {
+            return redirect('/');
+        }
     }
 }

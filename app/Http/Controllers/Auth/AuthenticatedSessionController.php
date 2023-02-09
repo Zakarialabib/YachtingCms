@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -32,7 +34,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME);
+        if (Auth::user()->isAdmin()) {
+            return redirect()->intended(RouteServiceProvider::ADMIN_HOME);
+        } elseif (Auth::user()->isClient()) {
+            return redirect()->intended(RouteServiceProvider::CLIENT_HOME);
+        } else {
+            return redirect('/');
+        }
     }
 
     /**

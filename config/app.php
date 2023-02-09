@@ -187,7 +187,6 @@ return [
          */
         UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        nilsenj\Toastr\ToastrServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         RenatoMarinho\LaravelPageSpeed\ServiceProvider::class,

@@ -1,20 +1,28 @@
 <?php
 
-namespace App\Models;
+declare(strict_types=1);
 
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Language extends Model
 {
-    protected $table = 'languages';
+    public const STATUS_ACTIVE = 1;
 
-    protected $casts = [
-        'is_default' => 'integer',
-        'is_active' => 'integer'
+    public const STATUS_INACTIVE = 0;
+
+    public const IS_DEFAULT = 1;
+
+    public const IS_NOT_DEFAULT = 0;
+
+    protected $fillable = [
+        'name',
+        'code',
+        'status',
+        'is_default',
     ];
 
-    const STATUS_DEACTIVE = 0;
-    const STATUS_ACTIVE = 1;
-    const IS_DEFAULT = 1;
+    public $timestamps = false;
+
 }

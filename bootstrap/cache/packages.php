@@ -40,14 +40,8 @@
     ),
     'aliases' => 
     array (
-      'PDF' => 'Barryvdh\\DomPDF\\Facade',
-    ),
-  ),
-  'barryvdh/laravel-translation-manager' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Barryvdh\\TranslationManager\\ManagerServiceProvider',
+      'Pdf' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
+      'PDF' => 'Barryvdh\\DomPDF\\Facade\\Pdf',
     ),
   ),
   'blade-ui-kit/blade-heroicons' => 
@@ -64,29 +58,15 @@
       0 => 'BladeUI\\Icons\\BladeIconsServiceProvider',
     ),
   ),
-  'facade/ignition' => 
+  'brotzka/laravel-dotenv-editor' => 
   array (
     'providers' => 
     array (
-      0 => 'Facade\\Ignition\\IgnitionServiceProvider',
+      0 => 'Brotzka\\DotenvEditor\\DotenvEditorServiceProvider',
     ),
     'aliases' => 
     array (
-      'Flare' => 'Facade\\Ignition\\Facades\\Flare',
-    ),
-  ),
-  'fideloper/proxy' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    ),
-  ),
-  'fruitcake/laravel-cors' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Fruitcake\\Cors\\CorsServiceProvider',
+      'DotenvEditor' => 'Brotzka\\DotenvEditor\\DotenvEditorFacade',
     ),
   ),
   'intervention/image' => 
@@ -98,6 +78,24 @@
     'aliases' => 
     array (
       'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
+  'jantinnerezo/livewire-alert' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Jantinnerezo\\LivewireAlert\\LivewireAlertServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'LivewireAlert' => 'Jantinnerezo\\LivewireAlert\\LivewireAlertFacade',
+    ),
+  ),
+  'kkomelin/laravel-translatable-string-exporter' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'KKomelin\\TranslatableStringExporter\\Providers\\ExporterServiceProvider',
     ),
   ),
   'laravel/sail' => 
@@ -128,18 +126,6 @@
       0 => 'Laravel\\Ui\\UiServiceProvider',
     ),
   ),
-  'laravelcollective/html' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Collective\\Html\\HtmlServiceProvider',
-    ),
-    'aliases' => 
-    array (
-      'Form' => 'Collective\\Html\\FormFacade',
-      'Html' => 'Collective\\Html\\HtmlFacade',
-    ),
-  ),
   'livewire/livewire' => 
   array (
     'providers' => 
@@ -165,6 +151,24 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'nunomaduro/termwind' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'realrashid/sweet-alert' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'RealRashid\\SweetAlert\\SweetAlertServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Alert' => 'RealRashid\\SweetAlert\\Facades\\Alert',
+    ),
+  ),
   'renatomarinho/laravel-page-speed' => 
   array (
     'providers' => 
@@ -172,15 +176,15 @@
       0 => 'RenatoMarinho\\LaravelPageSpeed\\ServiceProvider',
     ),
   ),
-  'spatie/laravel-menu' => 
+  'spatie/laravel-ignition' => 
   array (
     'providers' => 
     array (
-      0 => 'Spatie\\Menu\\Laravel\\MenuServiceProvider',
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
     'aliases' => 
     array (
-      'Menu' => 'Spatie\\Menu\\Laravel\\Facades\\Menu',
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
   'spatie/laravel-permission' => 
@@ -190,11 +194,11 @@
       0 => 'Spatie\\Permission\\PermissionServiceProvider',
     ),
   ),
-  'tanmuhittin/laravel-google-translate' => 
+  'spatie/laravel-sitemap' => 
   array (
     'providers' => 
     array (
-      0 => 'Tanmuhittin\\LaravelGoogleTranslate\\LaravelGoogleTranslateServiceProvider',
+      0 => 'Spatie\\Sitemap\\SitemapServiceProvider',
     ),
   ),
   'unisharp/laravel-filemanager' => 
